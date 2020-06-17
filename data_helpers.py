@@ -85,8 +85,6 @@ def make_mp4(state,dtype,max_date):
     for filename in os.listdir(f'plots/{state}/discrete/{dtype}'):
         dis_images.append(imageio.imread(os.path.join(f'plots/{state}/discrete/{dtype}',filename)))
     imageio.mimsave(f'results/{state}/{dtype}_discrete_{state}.mp4', dis_images)
-    
-    rmtree('plots')
 
 def make_plots(index, plot_index, state, file, dtype, max_day, max_cummulative,trim):
     
